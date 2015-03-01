@@ -9,7 +9,10 @@ class Calculate(object):
 
     @staticmethod
     def subtract(x, y):
-        pass
+        if type(x) == int and type(y) == int:
+            return x - y
+        else:
+            raise TypeError("Invalid type: {} and {}".format(type(x), type(y)))
 
     @staticmethod
     def multiply():
