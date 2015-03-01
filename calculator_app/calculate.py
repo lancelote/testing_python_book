@@ -8,7 +8,7 @@ class Calculate(object):
             raise TypeError("Invalid type: {} and {}".format(type(x), type(y)))
 
     @staticmethod
-    def subtract():
+    def subtract(x, y):
         pass
 
     @staticmethod
