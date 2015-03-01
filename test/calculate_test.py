@@ -32,6 +32,9 @@ class TestCalculate(unittest.TestCase):
         self.assertEqual(0, self.calc.divide(0, 2))
         self.assertEqual(-2, self.calc.divide(4, -2))
 
+    def test_divide_method_raises_typeerror(self):
+        self.assertRaises(TypeError, self.calc.divide, "Hello", "World")
+
     def test_divide_method_raises_zerodivisionerror(self):
         self.assertRaises(ZeroDivisionError, self.calc.divide, 1, 0)
 
