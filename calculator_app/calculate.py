@@ -22,8 +22,13 @@ class Calculate(object):
             raise TypeError("Invalid type: {} and {}".format(type(x), type(y)))
 
     @staticmethod
-    def divide():
-        pass
+    def divide(x, y):
+        if y == 0:
+            raise ZeroDivisionError("Division by zero!")
+        elif type(x) == int and type(y) == int:
+            return x/y
+        else:
+            raise TypeError("Invalid type: {} and {}".format(type(x), type(y)))
 
 
 class Store():
