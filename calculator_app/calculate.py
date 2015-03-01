@@ -1,18 +1,22 @@
 class Calculate(object):
 
-    def add(self, x, y):
+    @staticmethod
+    def add(x, y):
         if type(x) == int and type(y) == int:
             return x + y
         else:
             raise TypeError("Invalid type: {} and {}".format(type(x), type(y)))
 
-    def subtract(self):
+    @staticmethod
+    def subtract():
         pass
 
-    def multiply(self):
+    @staticmethod
+    def multiply():
         pass
 
-    def divide(self):
+    @staticmethod
+    def divide():
         pass
 
 
