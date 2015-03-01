@@ -15,8 +15,11 @@ class Calculate(object):
             raise TypeError("Invalid type: {} and {}".format(type(x), type(y)))
 
     @staticmethod
-    def multiply():
-        pass
+    def multiply(x, y):
+        if type(x) == int and type(y) == int:
+            return x*y
+        else:
+            raise TypeError("Invalid type: {} and {}".format(type(x), type(y)))
 
     @staticmethod
     def divide():
