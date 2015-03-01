@@ -27,5 +27,13 @@ class TestCalculate(unittest.TestCase):
     def test_multiply_method_raises_typeerror_if_not_ints(self):
         self.assertRaises(TypeError, self.calc.multiply, "Hello", "World")
 
+    def test_divide_method_returns_correct_result(self):
+        self.assertEqual(4, self.calc.divide(8, 2))
+        self.assertEqual(0, self.calc.divide(0, 2))
+        self.assertEqual(-2, self.calc.divide(4, -2))
+
+    def test_divide_method_raises_zerodivisionerror(self):
+        self.assertRaises(ZeroDivisionError, self.calc.divide, 1, 0)
+
 if __name__ == '__main__':
     unittest.main()
