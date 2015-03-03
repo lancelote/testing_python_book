@@ -11,5 +11,5 @@ python3 -m unittest discover
 
 Specific:
 ```bash
-python3 -m unittest test/calculate_test.py
+python3 -m unittest test/unit/calculate_test.py
 ```
