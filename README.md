@@ -4,12 +4,16 @@ Code from "Testing Python" book
 
 ## To run tests
 
-All:
+Via unittest:
 ```bash
-python3 -m unittest discover
+python3 -m unittest test/unit/calculator_app/calculate_test.py
 ```
 
-Specific:
+Via nose:
 ```bash
-python3 -m unittest test/unit/calculate_test.py
+nosetests
 ```
+
+`nosetests` does not run executable files by default, so one should make them non-executable by `chmod -x *.py` or
+explicitly tell nosetests to run executable files by `--exe`. chmod can not make files at ntfs/fat32 partitions
+executable.
