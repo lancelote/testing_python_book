@@ -23,6 +23,8 @@ nosetests test/unit/calculator_app/calculate_test.py
 explicitly tell nosetests to run executable files by `--exe`. chmod can not make files at ntfs/fat32 partitions
 executable.
 
+Use `--rednose` to color test results (same name package required).
+
 ## To debug
 
 PDB:
@@ -32,6 +34,7 @@ nosetests --pdb
 
 ## To check test coverage
 
+Package `nose-cov` required:
 ```bash
 nosetests --with-coverage
 ```
