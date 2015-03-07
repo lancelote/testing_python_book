@@ -39,7 +39,7 @@ class Store():
     def delete(self):
         pass
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     calc = Calculate()
     result = calc.add(2, 2)
     print(result)
