@@ -25,11 +25,17 @@ executable.
 
 Use `--rednose` to color test results (same name package required).
 
+Via py.test:
+```bash
+py.test
+```
+
 ## To debug
 
 PDB:
-```python3
+```bash
 nosetests --pdb
+py.test --pdb
 ```
 
 ## To check test coverage
@@ -37,4 +43,9 @@ nosetests --pdb
 Package `nose-cov` required:
 ```bash
 nosetests --with-coverage
+```
+
+Package `pytest-cov`:
+```bash
+py.test --cov-report term-missing --cov calculator_app/ test/
 ```
