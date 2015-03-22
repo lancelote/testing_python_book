@@ -9,6 +9,10 @@ class Calculate(object):
         2
         >>> Calculate.add(125, 25)
         150
+        >>> Calculate.add(1.0, 1.0)
+        Traceback (most recent call last):
+            ...
+        TypeError: Invalid type: <class 'float'> and <class 'float'>
         """
         if type(x) == int and type(y) == int:
             return x + y
@@ -58,7 +62,7 @@ class Calculate(object):
         if y == 0:
             raise ZeroDivisionError("Division by zero!")
         elif type(x) == int and type(y) == int:
-            return x/y
+            return int(x/y)
         else:
             raise TypeError("Invalid type: {} and {}".format(type(x), type(y)))
 
@@ -70,3 +74,9 @@ class Store():
 
     def delete(self):
         pass
+
+# Doctest direct start
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(extraglobs={'c': Calculate()})

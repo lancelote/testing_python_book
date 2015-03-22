@@ -26,7 +26,7 @@ class TestAccount(unittest.TestCase):
         account = Account(mock_data_interface)
         self.assertEqual("Connection error occurred. Try Again.", account.get_account(1))
 
-    @patch('mock.mock.requests')
+    @patch('mocking.mocking.requests')
     def test_get_current_balance_returns_data_correctly(self, mock_requests):
         mock_response = Mock()
         mock_response.status_code = 200
@@ -35,6 +35,3 @@ class TestAccount(unittest.TestCase):
         account = Account(Mock())
         self.assertEqual({'status': 200, 'data': 'Some text data'},
                          account.get_current_balance('1'))
-
-if __name__ == '__main__':
-    unittest.main()

@@ -49,3 +49,10 @@ Package `pytest-cov`:
 ```bash
 py.test --cov-report term-missing --cov calculator_app/ test/
 ```
+
+## To run doctests
+
+```bash
+py.test --doctest-modules calculator_app/ test/unit/calculator_app/
+nosetests --with-doctest
+```
