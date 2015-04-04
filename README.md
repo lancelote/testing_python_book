@@ -56,3 +56,10 @@ py.test --cov-report term-missing --cov calculator_app/ test/
 py.test --doctest-modules calculator_app/ test/unit/calculator_app/
 nosetests --with-doctest
 ```
+
+## To run behaviour tests
+
+I use `behave` as an alternative to `lettuce`:
+```bash
+behave bank/test/bdd/features/
+```
