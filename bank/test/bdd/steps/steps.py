@@ -31,7 +31,7 @@ def step_impl(context, account_number):
     @type account_number str
     """
     form = context.response.forms['account-form']
-    form['account-number'] = account_number
+    form['account_number'] = account_number
     context.form_response = form.submit()
     assert_equal(context.form_response.status_code, 200)
     assert_in("Account Number:", context.form_response.text)
