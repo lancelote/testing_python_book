@@ -63,3 +63,8 @@ I use `behave` as an alternative to `lettuce`:
 ```bash
 behave bank/test/bdd/features/
 ```
+
+Specific test by tag:
+```bash
+behave --tags=customer_balance bank/test/bdd/features/
+```

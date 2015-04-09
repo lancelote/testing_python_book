@@ -5,6 +5,7 @@ Feature: Bank web application to retrieve
   and update
   and withdraw from my balance
 
+  @customer_balance
   Scenario Outline: Retrieve customer balance
     Given I create account "<account_number>" with balance of "<balance>"
     When I visit the homepage
