@@ -57,7 +57,7 @@ py.test --doctest-modules calculator_app/ test/unit/calculator_app/
 nosetests --with-doctest
 ```
 
-## To run behaviour tests
+## To run acceptance tests
 
 I use `behave` as an alternative to `lettuce`:
 ```bash
@@ -67,4 +67,9 @@ behave bank/test/bdd/features/
 Specific test by tag:
 ```bash
 behave --tags=customer_balance bank/test/bdd/features/
+```
+
+Robotframwork:
+```bash
+pybot bank/test/bdd/robot/
 ```
