@@ -73,3 +73,14 @@ Robotframwork:
 ```bash
 pybot bank/test/bdd/robot/
 ```
+
+## Profiling
+
+```bash
+python -m cProfile -s time run_bank_app.py
+```
+
+Visualization:
+```bash
+pycallgraph graphviz -- run_bank_app.py
+```
