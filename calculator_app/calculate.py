@@ -1,9 +1,21 @@
+"""
+Calculator implementation
+"""
+
+
 class Calculate(object):
+    """
+    Calculator object
+    """
 
     @staticmethod
-    def add(x, y):
+    def add(number_1, number_2):
         """
         Takes two integers and adds them together to produce the result.
+
+        @type number_1: int
+        @type number_2: int
+        @return: sum of two numbers
 
         >>> Calculate.add(1, 1)
         2
@@ -14,66 +26,69 @@ class Calculate(object):
             ...
         TypeError: Invalid type: <class 'float'> and <class 'float'>
         """
-        if type(x) == int and type(y) == int:
-            return x + y
+        if isinstance(number_1, int) and isinstance(number_2, int):
+            return number_1 + number_2
         else:
-            raise TypeError("Invalid type: {} and {}".format(type(x), type(y)))
+            raise TypeError("Invalid type: {} and {}".format(type(number_1), type(number_2)))
 
     @staticmethod
-    def subtract(x, y):
+    def subtract(number_1, number_2):
         """
         Takes two integers and subtracts second from first to produce the result.
+
+        @type number_1: int
+        @type number_2: int
+        @return: difference between two numbers
 
         >>> Calculate.subtract(2, 1)
         1
         >>> Calculate.subtract(10, 11)
         -1
         """
-        if type(x) == int and type(y) == int:
-            return x - y
+        if isinstance(number_1, int) and isinstance(number_2, int):
+            return number_1 - number_2
         else:
-            raise TypeError("Invalid type: {} and {}".format(type(x), type(y)))
+            raise TypeError("Invalid type: {} and {}".format(type(number_1), type(number_2)))
 
     @staticmethod
-    def multiply(x, y):
+    def multiply(number_1, number_2):
         """
         Multiplies two integers to produce the result.
+
+        @type number_1: int
+        @type number_2: int
+        @return: product of the two numbers multiplication
 
         >>> Calculate.multiply(2, 2)
         4
         >>> Calculate.multiply(3, 4)
         12
         """
-        if type(x) == int and type(y) == int:
-            return x*y
+        if isinstance(number_1, int) and isinstance(number_2, int):
+            return number_1*number_2
         else:
-            raise TypeError("Invalid type: {} and {}".format(type(x), type(y)))
+            raise TypeError("Invalid type: {} and {}".format(type(number_1), type(number_2)))
 
     @staticmethod
-    def divide(x, y):
+    def divide(number_1, number_2):
         """
         Divides th first integer by the second to produce result.
+
+        @type number_1: int
+        @type number_2: int
+        @return: product of the two numbers division
 
         >>> Calculate.divide(6, 2)
         3
         >>> Calculate.divide(10, 2)
         5
         """
-        if y == 0:
+        if number_2 == 0:
             raise ZeroDivisionError("Division by zero!")
-        elif type(x) == int and type(y) == int:
-            return int(x/y)
+        if isinstance(number_1, int) and isinstance(number_2, int):
+            return int(number_1/number_2)
         else:
-            raise TypeError("Invalid type: {} and {}".format(type(x), type(y)))
-
-
-class Store():
-
-    def store(self):
-        pass
-
-    def delete(self):
-        pass
+            raise TypeError("Invalid type: {} and {}".format(type(number_1), type(number_2)))
 
 # Doctest direct start
 
