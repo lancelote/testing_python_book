@@ -84,3 +84,9 @@ Visualization:
 ```bash
 pycallgraph graphviz -- run_bank_app.py
 ```
+
+## Code validation
+
+```bash
+pylint calculator_app/calculate.py
+```
