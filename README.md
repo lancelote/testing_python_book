@@ -50,6 +50,22 @@ Package `pytest-cov`:
 py.test --cov-report term-missing --cov calculator_app/ test/
 ```
 
+Generate report:
+```bash
+nosetests --with-coverage --cover-html
+py.test --cov-report html --cov calculator_app/ test/
+```
+
+Coverage threshold:
+```bash
+nosetests --with-coverage --cov-min-percentage=95
+```
+
+To uncover some code:
+```python
+def func():  #pragma: no cover
+```
+
 ## To run doctests
 
 ```bash
