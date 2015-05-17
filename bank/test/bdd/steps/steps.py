@@ -1,3 +1,4 @@
+import requests
 from behave import *
 from nose.tools import assert_equal, assert_in
 from webtest import TestApp
@@ -44,3 +45,43 @@ def step_impl(context, expected_balance):
     @type expected_balance str
     """
     assert_in("Balance: {}".format(expected_balance), context.form_response.text)
+
+
+@given('I make a GET request to (?P<url>[^"]*)')
+def step_impl(context, url):
+    """
+    Smoke tests
+    """
+    context.response = requests.get(url)
+    print(context.response)
+
+
+@then('I receive a successful response')
+def step_imp(context):
+    """
+    Smoke tests
+    """
+    assert_equal(context.response.status_code, 200)
+
+@when('enter username "(?P<username>[^"]*)"')
+def step_impl(context, username):
+    """
+    Enter the username into right form
+    """
+    form = context.response.forms['account-form']
+    form['username'] = username
+
+@when('enter password "(?P<password>[^"]*)"')
+def step_impl(context, password):
+    """
+    Enter the password into right form
+    """
+    form = context.response.forms['account-form']
+    form['password'] = password
+
+@when('I click login')
+def step_impl(context):
+    """
+    Send form to server
+    """
+    context.response.click()

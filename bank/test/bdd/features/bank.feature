@@ -14,3 +14,20 @@ Feature: Bank web application to retrieve
     Examples:
       | account_number | balance |
       | 1111           | 50      |
+
+Feature: Bank application smoke tests
+
+  As a developer I wish to check that all components are up
+  and responding correctly to requests
+  and providing correct data
+
+  Scenario: Make GET request to Frontend
+    Given I make a GET request to http://frontend.com/
+    Then I receive a successful response
+
+  Scenario: Customer logs in and views balance
+    When I visit the homepage
+    When enter username "david"
+    When enter password "12345"
+    When I click login
+    Then I see a balance of "50"
